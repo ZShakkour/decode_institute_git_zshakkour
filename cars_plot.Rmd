@@ -1,0 +1,24 @@
+---
+title: "cars_plot"
+author: "Z Shakkour"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Example
+
+```{r}
+library(ggplot2)
+
+data(mtcars)
+
+ggplot(mtcars, aes(x = factor(cyl))) +
+  geom_bar() +
+  xlab("Number of Cylinders") +
+  ylab("Frequency")
+```
+
